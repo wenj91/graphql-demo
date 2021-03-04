@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wenj91.gql.dao.AccountMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wenj91.gql.pojo.entity.Account">
+        <id column="id" property="id" />
+        <result column="accountNumber" property="accountNumber" />
+        <result column="userId" property="userId" />
+        <result column="available" property="available" />
+        <result column="dailyLimit" property="dailyLimit" />
+        <result column="currency" property="currency" />
+        <result column="createAt" property="createAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, accountNumber, userId, available, dailyLimit, currency, createAt
+    </sql>
+
+</mapper>
