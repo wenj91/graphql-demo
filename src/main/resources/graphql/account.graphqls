@@ -1,0 +1,18 @@
+type Account {
+    id: ID,
+    accountNumber: String,
+    userId: Int,
+    available: Float,
+    dailyLimit: Float,
+    currency: String,
+    createAt: String
+}
+
+input AccountQueryDTO {
+    page: Int,
+    pageSize: Int
+}
+
+extend type Query {
+    accounts(dto: AccountQueryDTO): [Account]
+}

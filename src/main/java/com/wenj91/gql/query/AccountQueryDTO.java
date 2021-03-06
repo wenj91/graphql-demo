@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DTO {
+public class AccountQueryDTO {
     private Integer page;
     private Integer pageSize;
 }

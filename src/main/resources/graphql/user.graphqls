@@ -6,24 +6,8 @@ type User {
     items:String
 }
 
-type Account {
-    id: ID,
-    accountNumber: String,
-    userId: Int,
-    available: Float,
-    dailyLimit: Float,
-    currency: String,
-    createAt: String
-}
-
-input DTO{
-    page: Int,
-    pageSize: Int
-}
-
-type Query{
+extend type Query {
     users: [User]
     user(id: ID!): User
     userByIn(age: Int, name: String!): [User]
-    accounts(dto: DTO): [Account]
 }
